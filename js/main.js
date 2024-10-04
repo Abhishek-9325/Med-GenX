@@ -304,22 +304,73 @@ Version:	1.1
       verticalOffset: 0,
     });
 
-    /*====================
-			Google Maps JS
-		======================*/
-    var map = new GMaps({
-      el: "#map",
-      lat: 23.011245,
-      lng: 90.88478,
-      scrollwheel: false,
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        publicKey: "t_N51f-Ymq6u02NS8",
+      });
+    })();
+
+    // Input restrictions for name (only alphabets and space allowed)
+    $("#contact-name").on("input", function (event) {
+      var value = this.value;
+      // Allow only alphabets and spaces
+      this.value = value.replace(/[^a-zA-Z ]/g, "");
     });
-    map.addMarker({
-      lat: 23.011245,
-      lng: 90.88478,
-      title: "Marker with InfoWindow",
-      infoWindow: {
-        content: "<p>welcome to Medipro</p>",
-      },
+
+    // Input restrictions for phone (only digits allowed)
+    $("#contact-phone").on("input", function (event) {
+      var value = this.value;
+      // Allow only digits
+      this.value = value.replace(/[^\d]/g, "");
+    });
+
+    // Form validation before submission
+    $("#contact-form").on("submit", function (event) {
+      let isValid = true;
+
+      // Clear previous error messages
+      $(".text-danger").text("");
+
+      // Check if name field is empty
+      if ($("#contact-name").val().trim() === "") {
+        $("#name-error").text("Name is required");
+        isValid = false;
+      }
+
+      // Check if email field is empty
+      if ($("#contact-email").val().trim() === "") {
+        $("#email-error").text("Email is required");
+        isValid = false;
+      }
+
+      // Check if phone field is empty
+      if ($("#contact-phone").val().trim() === "") {
+        $("#phone-error").text("Phone is required");
+        isValid = false;
+      }
+
+      // Check if message field is empty
+      if ($("#contact-message").val().trim() === "") {
+        $("#message-error").text("Message is required");
+        isValid = false;
+      }
+
+      // Prevent form submission if any field is invalid
+      if (!isValid) {
+        event.preventDefault();
+      } else {
+        event.preventDefault();
+
+        emailjs.sendForm("service_dacq0d6", "template_x2y8ev9", this).then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+      }
     });
   });
 

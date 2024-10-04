@@ -6,6 +6,63 @@ Description: Mediplus - Doctor HTML Template.
 Version:	1.1
 ========================================*/
 /* Tablet Screen */
+@media only screen and (min-width: 600px) {
+  .header .header-inner .inner > div {
+    padding-inline: 0;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .slider .single-slider .text {
+    padding-block: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .slider .single-slider .text {
+    padding-block: 18%;
+  }
+  .slider .single-slider h1 {
+    font-size: 32px;
+  }
+  .slider .single-slider p {
+    margin-top: 12px;
+  }
+  .section {
+    padding: 70px 0;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  .Feautes .single-features h3 {
+    font-size: 18px;
+  }
+  .nav-tabs .nav-link {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .call-action .content h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .call-action .content {
+    padding: 80px 180px;
+  }
+  .appointment {
+    padding-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .appointment .appointment-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .appointment .appointment-image img {
+    width: 75%;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* Header Sticky */
   .section {
@@ -61,7 +118,7 @@ Version:	1.1
   }
   .header .header-inner .get-quote {
     margin-top: 12px;
-    display: none;
+    /* display: none; */
     margin: 0;
   }
   .header .nav li a {
@@ -181,7 +238,7 @@ Version:	1.1
   .Feautes .single-features {
     text-align: center;
     position: relative;
-    padding: 10px 155px;
+    /* padding: 10px 155px; */
     margin: 10px 0;
   }
   .fun-facts.section {
@@ -385,7 +442,7 @@ Version:	1.1
     z-index: 333;
     position: absolute;
     position: relative;
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
     background: #fff;
   }
   .slicknav_menu {
@@ -1148,7 +1205,7 @@ Version:	1.1
     font-size: 20px;
   }
   .fun-facts.section {
-    padding: 70px 0;
+    padding: 50px 0;
   }
   .fun-facts .single-fun {
     margin: 0;
@@ -1313,5 +1370,263 @@ Version:	1.1
   }
   .footer .footer-top {
     padding: 65px 0px;
+  }
+}
+
+.tabs-section .product-services-container {
+  justify-content: space-between;
+}
+.tabs-section {
+  padding: 40px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #1a76d1;
+}
+
+/* Nav Tabs Styling */
+.nav-tabs {
+  border-bottom: none;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* .nav-tabs .nav-item {
+  margin-bottom: -1px;
+} */
+
+.nav-tabs .nav-link {
+  background-color: #f1f1f1;
+  /* border: 2px solid transparent; */
+  /* border-radius: 50px; */
+  padding: 15px 30px;
+  color: #333;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #1a76d1;
+  border-color: #1a76d1;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #1a76d1;
+  color: white;
+}
+
+/* Tab Content Styling */
+.tabs-section .tab-content {
+  margin-top: 40px;
+  line-height: 1.3;
+}
+
+.tabs-section .tab-content .col-md-3 {
+  background: #ffffff;
+  padding: 0;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 24%;
+  text-align: center;
+}
+
+.tabs-section .tab-content .col-md-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabs-section .tab-content h4 {
+  background: #1a76d1;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 20px;
+  min-height: 80px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.tabs-section .tab-content ul {
+  list-style: none;
+  padding: 10px 10px 20px;
+  padding-left: 30px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.tabs-section .tab-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #888;
+}
+
+.tabs-section .tab-content li:before {
+  content: "\2022";
+  color: #1a76d1;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+@media only screen and (max-width: 1024px) {
+  .tabs-section .tab-content .col-md-3 {
+    max-width: 49%;
+    flex: 0 0 49%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tabs-section .product-services-container {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+  .tabs-section .tab-content .col-md-3 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .slider .single-slider .text {
+    padding-block: 10%;
+    text-align: center;
+  }
+  .slider .single-slider .button .btn {
+    width: fit-content;
+  }
+  .Feautes .second-feature-column {
+    margin-top: 0;
+  }
+  .Feautes .row {
+    align-items: center;
+    justify-content: center;
+  }
+  .fun-facts .single-fun .counter-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .fun-facts .single-fun:last-child {
+    margin-bottom: 0;
+  }
+  .fun-facts .row {
+    gap: 40px;
+  }
+  .tabs-section {
+    padding: 50px 0;
+  }
+  .nav-tabs .nav-link {
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+  .tabs-section .tab-content h4 {
+    padding: 15px 15px 20px;
+    min-height: unset;
+  }
+  .tabs-section .tab-content .col-md-3:last-child {
+    margin-bottom: 0;
+  }
+  .market-presence .section-title {
+    margin-bottom: 10px;
+  }
+  .market-presence .market-presence-container .country-list ul {
+    gap: 10px;
+  }
+  .appointment {
+    padding-top: 50px;
+  }
+  .appointment .section-title {
+    margin-bottom: 0;
+  }
+  .appointment .appointment-image {
+    margin-top: 0;
+  }
+  .footer .copyright .copyright-content p {
+    font-size: 12px;
+  }
+  .appointment .appointment-image img {
+    bottom: 0;
+  }
+}
+
+.market-presence {
+  padding: 50px 0;
+}
+
+.map-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+}
+
+.country-list {
+  padding: 20px;
+}
+
+.country-list h2 {
+  color: #1a76d1;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.country-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.country-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.country-list li i {
+  color: #ffb200;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .market-presence .market-presence-container {
+    flex-direction: column-reverse;
+  }
+  .market-presence .country-list {
+    width: 100%;
+    max-width: 100%;
+  }
+  .market-presence .country-list ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .market-presence .country-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-image {
+    width: 100%;
+  }
+  .market-presence .country-list ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
