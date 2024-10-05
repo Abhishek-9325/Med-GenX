@@ -332,7 +332,7 @@ Description: MedGENX.
       }
     });
 
-    $('a[href^="#"]').on("click", function (event) {
+    $('a[href^="#contact"]').on("click", function (event) {
       // Prevent default anchor click behavior
       event.preventDefault();
 
