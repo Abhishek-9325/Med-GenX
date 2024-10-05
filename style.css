@@ -315,7 +315,10 @@ body {
   color: #fff;
 }
 .header .logo {
-  padding-block: 20px;
+  padding-block: 10px;
+}
+.header .logo img {
+  height: 60px;
 }
 .header .navbar {
   background: none;
@@ -1592,7 +1595,7 @@ body {
   background-image: url("img/client-bg.jpg");
   background-size: cover;
   background-position: center;
-  padding: 100px 0px;
+  padding: 70px 0px;
   position: relative;
 }
 .clients .single-clients {
@@ -1603,6 +1606,39 @@ body {
   text-align: center;
   float: none;
   padding: 0 35px;
+}
+.clients .overlay-banner-text {
+  text-align: center;
+  padding: 0 150px;
+}
+.clients .overlay-banner-text h2 {
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+.clients .overlay-icon {
+  font-size: 60px;
+  color: #fff;
+  height: 130px;
+  width: 130px;
+  line-height: 100px;
+  text-align: center;
+  border: 3px solid #dddddd;
+  border-radius: 100%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+.clients .overlay-icon:hover {
+  background: #fff;
+  color: #1a76d1;
+  border-color: transparent;
 }
 /*========================
 	End Clients CSS

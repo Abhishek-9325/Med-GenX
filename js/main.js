@@ -152,10 +152,10 @@ Version:	1.1
     /*=====================================
 			Counter Up JS
 		======================================*/
-    $(".counter").counterUp({
-      delay: 20,
-      time: 2000,
-    });
+    // $(".counter").counterUp({
+    //   delay: 20,
+    //   time: 2000,
+    // });
 
     /*===============================
 			Clients Slider JS
@@ -370,6 +370,64 @@ Version:	1.1
             console.log("FAILED...", error);
           }
         );
+      }
+    });
+
+    $('a[href^="#"]').on("click", function (event) {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash (#section)
+      var target = this.hash;
+      let topOffset = 0;
+
+      if ($(window).width() < 600) {
+        topOffset = 180;
+      }
+
+      // Animate smooth scroll
+      $("html, body").animate(
+        {
+          scrollTop: $(target).offset().top - topOffset,
+        },
+        800
+      ); // Scroll speed (in milliseconds)
+    });
+  });
+
+  $(window).scroll(function () {
+    $(".counter-container").each(function () {
+      var windowHeight = $(window).height();
+      var scrollTop = $(window).scrollTop();
+      var elementTop = $(this).offset().top;
+      var elementHeight = $(this).outerHeight();
+      var distance = elementTop - scrollTop;
+
+      if (distance <= windowHeight && distance > -elementHeight) {
+        $(this).addClass("active");
+        if (!$(this).hasClass("counted")) {
+          $(this)
+            .find(".counter")
+            .each(function () {
+              var countValue = parseInt($(this).text().replace(/\D/g, ""), 10);
+              //console.log('>>', countValue);
+              $(this)
+                .prop("Counter", 0)
+                .animate(
+                  {
+                    Counter: countValue,
+                  },
+                  {
+                    duration: 1000,
+                    easing: "swing",
+                    step: function (now) {
+                      $(this).text(Math.ceil(now));
+                    },
+                  }
+                );
+            });
+          $(this).addClass("counted");
+        }
       }
     });
   });

@@ -50,6 +50,9 @@ Version:	1.1
   .appointment {
     padding-top: 70px;
   }
+  .clients .overlay-banner-text {
+    padding: 0 50px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -428,6 +431,12 @@ Version:	1.1
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
+  .header .header-inner-container {
+    gap: 0;
+  }
+  .header .logo {
+    padding-block: 20px 15px;
+  }
   .header.sticky {
   }
   .header.sticky .header-bottom {
@@ -1488,6 +1497,17 @@ h2 {
   }
 }
 @media only screen and (max-width: 600px) {
+  .clients .overlay-banner-text {
+    padding: 0;
+  }
+  .clients .overlay-banner-text h2 {
+    font-size: 22px;
+  }
+  .clients .overlay-icon {
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+  }
   .tabs-section .product-services-container {
     justify-content: center;
     width: 100%;
@@ -1547,6 +1567,9 @@ h2 {
   }
   .appointment .section-title {
     margin-bottom: 0;
+  }
+  .appointment .section-title br {
+    display: none;
   }
   .appointment .appointment-image {
     margin-top: 0;
