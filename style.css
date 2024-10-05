@@ -779,37 +779,45 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.fun-facts .col-md-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .fun-facts .single-fun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 .fun-facts .single-fun i {
-  position: absolute;
-  left: 0;
   font-size: 62px;
   color: #fff;
   height: 70px;
   width: 70px;
-  line-height: 67px;
+  line-height: 1;
   font-size: 28px;
   text-align: center;
   padding: 0;
   margin: 0;
   border: 2px solid #fff;
   border-radius: 0px;
-  top: 50%;
-  margin-top: -35px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fun-facts .single-fun:hover i {
   color: #1a76d1;
   background: #fff;
   border-color: transparent;
 }
-.fun-facts .single-fun .content {
+/* .fun-facts .single-fun .content {
   padding-left: 80px;
-}
+} */
 .fun-facts .single-fun span {
   color: #fff;
   font-weight: 600;
